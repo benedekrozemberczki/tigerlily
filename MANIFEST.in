@@ -1,0 +1,10 @@
+graft chemicalx
+graft tests
+
+prune docs
+prune dataset
+prune examples
+prune images
+
+include LICENSE README.md CONTRIBUTING.md
+exclude tox.ini .pre-commit-config.yaml dev_setup.sh readthedocs.yaml pull_request_template.md
