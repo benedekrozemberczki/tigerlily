@@ -22,7 +22,7 @@
 [![Build Status][build-image]][build-url]
 
 
-**[Documentation](https://tigerlily.readthedocs.io)** | **[Example](https://github.com/benedekrozemberczki/tigerlily/tree/main/examples)** 
+**[Documentation](https://tigerlily.readthedocs.io)** | **[Example Notebook](https://github.com/benedekrozemberczki/tigerlily/tree/main/examples)** 
 
 
 
@@ -38,11 +38,12 @@
   <img width="90%" src="https://github.com/benedekrozemberczki/tigerlily/blob/main/images/pair_scoring.jpg?sanitize=true" />
 </p>
 
+--------------------------------------------------------------------------------
+
 
 **Getting Started**
 
 The API of `tigerlily` ....
-
 
 ```python
 from tigerlily import ...
@@ -76,13 +77,15 @@ If you find *Tigerlily* useful in your research, please consider adding the foll
 
 **Installation**
 
-To install tigerlily, simply run
+To install tigerlily, simply run:
 
 ```sh
 pip install tigerlily
 ```
 
 **Running tests**
+
+Running tests requires that you run:
 
 ```
 $ tox -e py
