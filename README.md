@@ -32,7 +32,7 @@
 If you find *Tigerlily* useful in your research, please consider adding the following citation:
 
 ```bibtex
-@misc{tigerlyly2022,
+@misc{tigerlily2022,
   author = {Benedek Rozemberczki},
   title = {TigerLily: Finding drug interactions in-silico with the Graph},
   year = {2022},
