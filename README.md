@@ -32,7 +32,7 @@
 
 
 
-**Tigerlily** is a [TigerGraph](https://www.tigergraph.com/) based system desgigned to solve the [drug interaction prediction task](https://arxiv.org/abs/2111.02916). In this machine learning task we want to predict whether two drugs have an adverse interaction. Our framework allows to solve this highly relevant real world problem using graph mining techniques in these steps: 
+**Tigerlily** is a [TigerGraph](https://www.tigergraph.com/) based system desgigned to solve the [drug interaction prediction task](https://arxiv.org/abs/2111.02916). In this machine learning task we want to predict whether two drugs have an adverse interaction. Our framework allows to solve this **[highly relevant real world problem](https://www.newscientist.com/article/2143486-side-effects-kill-thousands-but-our-data-on-them-is-flawed/)** using graph mining techniques in these steps: 
 
 - **(a)** Using [PyTigergraph]() we create a heterogeneous biological graph of drugs and proteins.
 - **(b)** We calculate the [personalized PageRank](https://github.com/tigergraph/gsql-graph-algorithms/blob/master/algorithms/Centrality/pagerank/personalized/multi_source/tg_pagerank_pers.gsql) scores of drug nodes in the [TigerGraph Cloud](https://tgcloud.io/).
