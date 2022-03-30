@@ -6,8 +6,10 @@ install_requires = [
     "numpy",
     "pandas<=1.3.5",
     "tqdm",
+    "scipy",
     "scikit-learn",
-    "class-resolver>=0.2.1",
+    "pyTigerDriver=1.0.14",
+    "pyTigerGraph=0.0.9.9.2",
     "tabulate",
     "pystow",
 ]
@@ -31,26 +33,21 @@ extras_require = {
 }
 
 keywords = [
-    "drug",
-    "synergy-prediction",
-    "synergy",
     "drug-combination",
     "drug-interaction",
-    "chemistry",
-    "pharma",
 ]
 
 
 setup(
     name="tigerlily",
     packages=find_packages(),
-    version="0.0.1",
+    version="0.1.0",
     license="Apache License, Version 2.0",
-    description="A Deep Learning Library for Drug Pair Scoring.",
+    description="TigerLily: Finding drug interactions in-silico with the Graph.",
     author="Benedek Rozemberczki",
     author_email="benedek.rozemberczki@gmail.com",
-    url="https://github.com/AstraZeneca/tigerlily",
-    download_url="https://github.com/AstraZeneca/tigerlily/archive/v0.0.1.tar.gz",
+    url="https://github.com/benedekrozemberczki/tigerlily",
+    download_url="https://github.com/benedekrozemberczki/tigerlily/archive/v0.1.0.tar.gz",
     keywords=keywords,
     install_requires=install_requires,
     setup_requires=setup_requires,
