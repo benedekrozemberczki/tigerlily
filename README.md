@@ -34,10 +34,10 @@
 
 **Tigerlily** is a [TigerGraph](https://www.tigergraph.com/) based system desgigned to solve the [drug interaction prediction task](https://arxiv.org/abs/2111.02916). In this machine learning task we want to predict whether two drugs have an adverse interaction. Our framework allows to solve this highly relevant real world problem using graph mining techniques in these steps: 
 
-- **(a)** Using [PyTigergraph]() we define a heterogeneous biological graph.
-- **(b)** We calculate the Personalized PageRank of nodes in the TigerGraph Cloud.
-- **(c)** We embed the nodes using sparse Non-negative matrix factorization.
-- **(d)** Using the node embeddings we train a drug interaction predictor.
+- **(a)** Using [PyTigergraph]() we create a heterogeneous biological graph of drugs and proteins.
+- **(b)** We calculate the [personalized PageRank](https://github.com/tigergraph/gsql-graph-algorithms/blob/master/algorithms/Centrality/pagerank/personalized/multi_source/tg_pagerank_pers.gsql) scores of drug nodes in the [TigerGraph Cloud](https://tgcloud.io/).
+- **(c)** We embed the nodes using [sparse non-negative matrix factorization](https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.NMF.html) of the personalized PageRank matrix.
+- **(d)** Using the node embeddings we train a [gradient boosting](https://lightgbm.readthedocs.io/en/latest/) based drug interaction predictor.
 
 <p align="center">
   <img width="90%" src="https://github.com/benedekrozemberczki/tigerlily/blob/main/images/pair_scoring.jpg?sanitize=true" />
