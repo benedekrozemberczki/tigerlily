@@ -29,10 +29,17 @@
 **Citing**
 
 
-If you find *tigerlily* useful in your research, please consider adding the following citation:
+If you find *Tigerlily* useful in your research, please consider adding the following citation:
 
 ```bibtex
-
+@misc{tigerlyly2022,
+  author = {Benedek Rozemberczki},
+  title = {TigerLily: Finding drug interactions in-silico with the Graph},
+  year = {2022},
+  publisher = {GitHub},
+  journal = {GitHub repository},
+  howpublished = {\url{https://github.com/benedekrozemberczki/tigerlily}},
+}
 ```
 --------------------------------------------------------------------------------
 
