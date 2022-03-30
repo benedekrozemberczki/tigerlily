@@ -10,7 +10,7 @@
 [coverage-url]: https://codecov.io/github/benedekrozemberczki/tigerlily?branch=main
 
 <p align="center">
-  <img width="90%" src="https://github.com/benedekrozemberczki/tigerlily/blob/main/images/tigerlily_logo.jpg?sanitize=true" />
+  <img width="100%" src="https://github.com/benedekrozemberczki/tigerlily/blob/main/images/tigerlily_logo.jpg?sanitize=true" />
 </p>
 
 --------------------------------------------------------------------------------
