@@ -79,4 +79,5 @@ jobs:
         uses: codecov/codecov-action@v1
         if: success()
         with:
+          token: ${{ secrets.CODECOV_TOKEN }}
           file: coverage.xml
