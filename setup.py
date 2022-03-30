@@ -8,8 +8,8 @@ install_requires = [
     "tqdm",
     "scipy",
     "scikit-learn",
-    "pyTigerDriver=1.0.14",
-    "pyTigerGraph=0.0.9.9.2",
+    "pyTigerDriver==1.0.14",
+    "pyTigerGraph==0.0.9.9.2",
     "tabulate",
     "pystow",
 ]
