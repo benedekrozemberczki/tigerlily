@@ -10,16 +10,16 @@
 [coverage-url]: https://codecov.io/github/benedekrozemberczki/tigerlily?branch=main
 
 
---------------------------------------------------------------------------------
+
+<p align="center">
+  <img width="100%" src="https://github.com/benedekrozemberczki/tigerlily/blob/main/images/tigerlily_logo.jpg?sanitize=true" />
+</p>
+
 
 [![PyPI Version][pypi-image]][pypi-url]
 [![Docs Status][docs-image]][docs-url]
 [![Code Coverage][coverage-image]][coverage-url]
 [![Build Status][build-image]][build-url]
-
-<p align="center">
-  <img width="100%" src="https://github.com/benedekrozemberczki/tigerlily/blob/main/images/tigerlily_logo.jpg?sanitize=true" />
-</p>
 
 
 **[Documentation](https://tigerlily.readthedocs.io)** | **[Example](https://github.com/benedekrozemberczki/tigerlily/tree/main/examples)** 
