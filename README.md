@@ -26,23 +26,6 @@
 
 --------------------------------------------------------------------------------
 
-**Citing**
-
-
-If you find *Tigerlily* useful in your research, please consider adding the following citation:
-
-```bibtex
-@misc{tigerlily2022,
-  author = {Benedek Rozemberczki},
-  title = {TigerLily: Finding drug interactions in-silico with the Graph},
-  year = {2022},
-  publisher = {GitHub},
-  journal = {GitHub repository},
-  howpublished = {\url{https://github.com/benedekrozemberczki/tigerlily}},
-}
-```
---------------------------------------------------------------------------------
-
 **Drug Interaction Prediction with Tigerlily**
 
 Our framework solves the [drug pair scoring task](https://arxiv.org/abs/2111.02916) . In this machine learning task ..
@@ -68,6 +51,24 @@ For a quick start, check out the `examples/` directory.
 
 If you notice anything unexpected, please open an [issue](github.com/benedekrozemberczki/tigerlily/issues). If you are missing a specific method, feel free to open a [feature request](https://github.com/benedekrozemberczki/tigerlily/issues).
 
+
+--------------------------------------------------------------------------------
+
+**Citing**
+
+
+If you find *Tigerlily* useful in your research, please consider adding the following citation:
+
+```bibtex
+@misc{tigerlily2022,
+  author = {Benedek Rozemberczki},
+  title = {TigerLily: Finding drug interactions in-silico with the Graph},
+  year = {2022},
+  publisher = {GitHub},
+  journal = {GitHub repository},
+  howpublished = {\url{https://github.com/benedekrozemberczki/tigerlily}},
+}
+```
 
 --------------------------------------------------------------------------------
 
