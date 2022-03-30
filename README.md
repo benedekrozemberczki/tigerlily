@@ -10,25 +10,27 @@
 [coverage-url]: https://codecov.io/github/benedekrozemberczki/tigerlily?branch=main
 
 
-
-<p align="center">
-  <img width="100%" src="https://github.com/benedekrozemberczki/tigerlily/blob/main/images/tigerlily_logo.jpg?sanitize=true" />
-</p>
-
-
 [![PyPI Version][pypi-image]][pypi-url]
 [![Docs Status][docs-image]][docs-url]
 [![Code Coverage][coverage-image]][coverage-url]
 [![Build Status][build-image]][build-url]
 
 
-**[Documentation](https://tigerlily.readthedocs.io)** | **[Example Notebook](https://github.com/benedekrozemberczki/tigerlily/tree/main/examples)** 
+<p align="center">
+  <img width="100%" src="https://github.com/benedekrozemberczki/tigerlily/blob/main/images/tigerlily_logo.jpg?sanitize=true" />
+</p>
+
+
 
 
 
 --------------------------------------------------------------------------------
 
 **Drug Interaction Prediction with Tigerlily**
+
+**[Documentation](https://tigerlily.readthedocs.io)** | **[Example Notebook](https://github.com/benedekrozemberczki/tigerlily/tree/main/examples)** 
+
+
 
 **Tigerlily** is a [TigerGraph]() based system desgigned to solve the [drug interaction prediction task](https://arxiv.org/abs/2111.02916). In this machine learning task ..
 
