@@ -9,9 +9,6 @@
 [coverage-image]: https://codecov.io/gh/benedekrozemberczki/tigerlily/branch/main/graph/badge.svg
 [coverage-url]: https://codecov.io/github/benedekrozemberczki/tigerlily?branch=main
 
-<p align="center">
-  <img width="100%" src="https://github.com/benedekrozemberczki/tigerlily/blob/main/images/tigerlily_logo.jpg?sanitize=true" />
-</p>
 
 --------------------------------------------------------------------------------
 
@@ -21,6 +18,11 @@
 [![Build Status][build-image]][build-url]
 
 **[Documentation](https://tigerlily.readthedocs.io)** | **[Example](https://github.com/benedekrozemberczki/tigerlily/tree/main/examples)** 
+
+<p align="center">
+  <img width="100%" src="https://github.com/benedekrozemberczki/tigerlily/blob/main/images/tigerlily_logo.jpg?sanitize=true" />
+</p>
+
 
 *tigerlily* is a .....
 
