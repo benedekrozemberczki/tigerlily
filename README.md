@@ -19,9 +19,8 @@
 [![Docs Status][docs-image]][docs-url]
 [![Code Coverage][coverage-image]][coverage-url]
 [![Build Status][build-image]][build-url]
-[![Arxiv](https://img.shields.io/badge/ArXiv-2202.05240-orange.svg)](https://arxiv.org/abs/2202.05240)
 
-**[Documentation](https://tigerlily.readthedocs.io)** | **[External Resources](https://tigerlily.readthedocs.io/en/latest/notes/resources.html)** | **[Datasets](https://tigerlily.readthedocs.io/en/latest/notes/introduction.html#datasets)** | **[Examples](https://github.com/benedekrozemberczki/tigerlily/tree/main/examples)** 
+**[Documentation](https://tigerlily.readthedocs.io)** | **[Example](https://github.com/benedekrozemberczki/tigerlily/tree/main/examples)** 
 
 *tigerlily* is a .....
 
@@ -37,7 +36,7 @@ If you find *tigerlily* useful in your research, please consider adding the foll
 ```
 --------------------------------------------------------------------------------
 
-**Drug Pair Scoring Explained**
+**Drug Interaction Prediction with Tigerlily**
 
 Our framework solves the [drug pair scoring task](https://arxiv.org/abs/2111.02916) . In this machine learning task ..
 
