@@ -11,7 +11,7 @@ from sklearn.decomposition import NMF
 class EmbeddingMachine:
     """Tool to compute Personalized PageRank based embeddings."""
 
-    def __init__(self, seed: int = 42, dimensions: int = 128, max_iter: int = 20, alpha: float = 0.01):
+    def __init__(self, seed: int = 42, dimensions: int = 128, max_iter: int = 20):
         """Set  the default hyperparameters of the embeddings.
 
         :param seed: The random seed for factorization.

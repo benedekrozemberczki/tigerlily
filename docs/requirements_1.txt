@@ -16,3 +16,4 @@ pyTigerDriver==1.0.14
 pyTigerGraph==0.0.9.9.2
 tabulate
 pystow
+lightgbm
