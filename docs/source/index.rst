@@ -7,7 +7,7 @@ Tigerlily
 
 .. code-block:: latex
 
-     >@article{chemicalx}
+     >@article{tigerlily}
 
 .. toctree::
    :glob:

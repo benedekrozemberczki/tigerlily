@@ -4,7 +4,7 @@
 # You can set these variables from the command line.
 SPHINXOPTS    =
 SPHINXBUILD   = python -m sphinx
-SPHINXPROJ    = ChemicalX
+SPHINXPROJ    = TigerLily
 SOURCEDIR     = source
 BUILDDIR      = build
 

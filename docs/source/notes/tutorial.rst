@@ -12,6 +12,8 @@ Data Loading
 
 .. code-block:: python
 
+    import numpy as np
+
 
 
 Upstream Model Training
@@ -20,11 +22,14 @@ Upstream Model Training
 
 .. code-block:: python
 
+    import numpy as np
 
 
-Model Scoring
+
+Downstream Model Training and Scoring
 -------------
 
 
 .. code-block:: python
 
+    import numpy as np
