@@ -58,7 +58,6 @@ class TestPipeline(unittest.TestCase):
 
     def test_data(self):
         """Test the dataset."""
-
         self.dataset = ExampleDataset()
 
         edges = self.dataset.read_edges()
