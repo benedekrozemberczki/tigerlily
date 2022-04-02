@@ -55,3 +55,17 @@ class TestPipeline(unittest.TestCase):
 
         drug_pair_features = embedding_machine.create_features(self.target, l2_norm_operator)
         assert drug_pair_features.shape[1] == 128
+
+    def test_data(self):
+        """Test the dataset."""
+
+        self.dataset = ExampleDataset()
+
+        edges = self.dataset.read_edges()
+        assert edges.shape == (816683, 4)
+
+        target = self.dataset.read_target()
+        assert target.shape == (187850, 3)
+
+        pagerank_scores = self.dataset.read_pagerank()
+        assert pagerank_scores.shape == (54110, 3)
