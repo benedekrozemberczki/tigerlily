@@ -12,6 +12,7 @@ install_requires = [
     "pyTigerGraph==0.0.9.9.2",
     "tabulate",
     "pystow",
+    "six",
 ]
 
 

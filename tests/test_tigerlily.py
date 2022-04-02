@@ -3,8 +3,6 @@
 import unittest
 
 
-
-
 class TestPipeline(unittest.TestCase):
     """Test tigerlily."""
 

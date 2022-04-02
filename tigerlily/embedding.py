@@ -1,16 +1,30 @@
+"""Tool to compute Personalized PageRank based embeddings."""
+
+from typing import Callable
+
+import numpy as np
 import pandas as pd
 from scipy.sparse import coo_matrix
 from sklearn.decomposition import NMF
-import numpy as np
 
 
 class EmbeddingMachine:
-    def __init__(self, seed: int = 42, dimensions: int = 128, max_iter: int = 20):
+    """Tool to compute Personalized PageRank based embeddings."""
+
+    def __init__(self, seed: int = 42, dimensions: int = 128, max_iter: int = 20, alpha: float = 0.01):
+        """Set  the default hyperparameters of the embeddings.
+
+        :param seed: The random seed for factorization.
+        :param dimensions: The number of embedding dimensions.
+        :param max_iter: The number of iterations.
+        :param alpha: The regularization coefficient.
+        """
         self.seed = seed
         self.dimensions = dimensions
         self.max_iter = max_iter
+        self.alpha = alpha
 
-    def generate_mappings(self, pagerank_scores):
+    def _generate_mappings(self, pagerank_scores):
         node_1_mapping = {node: i for i, node in enumerate(set(pagerank_scores["node_1"].values.tolist()))}
         node_2_mapping = {node: i for i, node in enumerate(set(pagerank_scores["node_2"].values.tolist()))}
         pagerank_scores["node_1_num"] = pagerank_scores["node_1"].map(lambda x: node_1_mapping[x])
@@ -22,12 +36,25 @@ class EmbeddingMachine:
 
         return pagerank_scores, mat
 
-    def fit(self, pagerank_scores: pd.DataFrame):
+    def fit(self, pagerank_scores: pd.DataFrame) -> pd.DataFrame:
+        """Train an embedding model.
+
+        :param pagerank_scores: A dataframe of the top-k personalized PageRank scores.
+        :returns: A node embedding for each source.
+        """
         assert "node_1" in pagerank_scores
         assert "node_2" in pagerank_scores
         assert "score" in pagerank_scores
-        pagerank_scores, pagerank_mat = self.generate_mappings(pagerank_scores)
-        model = NMF(n_components=self.dimensions)
+        pagerank_scores, pagerank_mat = self._generate_mappings(pagerank_scores)
+
+        model = NMF(
+            n_components=self.dimensions,
+            max_iter=self.max_iter,
+            dimensions=self.dimensions,
+            alpha_W=self.alpha,
+            alpha_H=self.alpha,
+        )
+
         raw_embedding = model.fit_transform(pagerank_mat)
         raw_embedding = (raw_embedding - raw_embedding.mean(0)) / raw_embedding.std(0)
         embedding = pd.DataFrame(raw_embedding, columns=["emb_" + str(i) for i in range(self.dimensions)])
@@ -39,7 +66,15 @@ class EmbeddingMachine:
         self.embedding = embedding.rename(columns={"node_1": "node_id"})
         return self.embedding
 
-    def create_features(self, target, feature_definition):
+    def create_features(
+        self, target: pd.DataFrame, feature_definition: Callable[[np.ndarray, np.ndarray], np.ndarray]
+    ) -> np.ndarray:
+        """Calculate the edge features based on node embeddings.
+
+        :param target: A dataframe of drug-drug interactions.
+        :param feature_definition: A Tigerlily edge feature computation function.
+        :returns: Drug pair features for each edge.
+        """
         self.embedding = self.embedding.set_index("node_id")
 
         drug_features_left = target[["drug_1"]].rename(columns={"drug_1": "node_id"})

@@ -1,24 +1,29 @@
-
 """A class to read the DrugBankDDI Dataset."""
 
 import io
-import urllib
+
 import pandas as pd
+from six.moves import urllib
 
 
 class ExampleDataset:
     """Class to read the DrugBank DDI Dataset Integrated with BioSNAP."""
-    def __init__(self, base_url: str="https://raw.githubusercontent.com/benedekrozemberczki/datasets/master/tigerlily_example_data/"):
+
+    def __init__(
+        self,
+        base_url: str = "https://raw.githubusercontent.com/benedekrozemberczki/datasets/master/tigerlily_example_data/",
+    ):
+        """Create the dataset loader.
+
+        :param base_url: The folder with the CSV files.
+        """
         self.base_url = base_url
 
-
     def _read_table(self, name: str):
-        """Method to read the edges.
-        Args:
-            name (str): Name of the csv file.
-    
-        Returns:
-            data (pd.DataFrame): The table with data.
+        """Read the edges.
+
+        :param name: Name of the csv file.
+        :returns: The table with data.
         """
         path = self.base_url + name
         bytes = urllib.request.urlopen(path).read()
@@ -26,28 +31,25 @@ class ExampleDataset:
         return data
 
     def read_edges(self):
-        """Method to read the edges.
+        """Read the edges.
 
-        Returns:
-            edges (pd.DataFrame): The protei-drug graph edges dataframe.
+        :returns: The protein-drug graph edges dataframe.
         """
         edges = self._read_table("edges.csv")
         return edges
 
     def read_target(self):
-        """Method to read the target.
+        """Read the target.
 
-        Returns:
-            target (pd.DataFrame): The drug interaction target dataframe.
+        :returns: The drug interaction target dataframe.
         """
         edges = self._read_table("target.csv")
         return edges
 
     def read_pagerank(self):
-        """Method to read the precomputed PageRank scores for the graph.
+        """Read the precomputed PageRank scores for the graph.
 
-        Returns:
-            pagerank_scores (pd.DataFrame): The PageRank scores.
+        :returns: The PageRank scores.
         """
         pagerank_scores = self._read_table("pagerank_scores.csv")
         return pagerank_scores
