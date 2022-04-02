@@ -7,7 +7,7 @@ version: 2
 sphinx:
    configuration: docs/source/conf.py
 
-# Build HTML only
+# Build HTML only her
 formats:
    - htmlzip
 
