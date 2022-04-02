@@ -17,12 +17,10 @@ class EmbeddingMachine:
         :param seed: The random seed for factorization.
         :param dimensions: The number of embedding dimensions.
         :param max_iter: The number of iterations.
-        :param alpha: The regularization coefficient.
         """
         self.seed = seed
         self.dimensions = dimensions
         self.max_iter = max_iter
-        self.alpha = alpha
 
     def _generate_mappings(self, pagerank_scores):
         node_1_mapping = {node: i for i, node in enumerate(set(pagerank_scores["node_1"].values.tolist()))}
@@ -50,9 +48,7 @@ class EmbeddingMachine:
         model = NMF(
             n_components=self.dimensions,
             max_iter=self.max_iter,
-            dimensions=self.dimensions,
-            alpha_W=self.alpha,
-            alpha_H=self.alpha,
+            random_state=self.seed,
         )
 
         raw_embedding = model.fit_transform(pagerank_mat)

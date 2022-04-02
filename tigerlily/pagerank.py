@@ -68,7 +68,7 @@ class PersonalizedPageRankMachine:
         self._upload_relationship(edges, "gene", "gene", "interacts")
         self._upload_relationship(edges, "gene", "drug", "interacts")
 
-    def install_query(self, url: str):
+    def install_query(self, url: str="https://raw.githubusercontent.com/tigergraph/gsql-graph-algorithms/master/algorithms/Centrality/pagerank/personalized/multi_source/tg_pagerank_pers.gsql"):
         """Install a query on the host.
 
         :param url: A url to the query string.

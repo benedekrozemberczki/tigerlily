@@ -54,5 +54,5 @@ def concatenation_operator(embedding_left: np.ndarray, embedding_right: np.ndarr
     :param embedding_right: Right hand side node features.
     :returns: The edge features.
     """
-    edge_features = np.concat([embedding_left, embedding_right], axis=1)
+    edge_features = np.concatenate([embedding_left, embedding_right], axis=1)
     return edge_features
