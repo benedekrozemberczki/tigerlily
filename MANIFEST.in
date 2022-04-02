@@ -9,5 +9,6 @@ prunt script
 
 include LICENSE README.md CONTRIBUTING.md
 include *.ipynb
+include .coveragerc
 exclude tox.ini .pre-commit-config.yaml dev_setup.sh readthedocs.yaml pull_request_template.md
 recursive-include script *.gqsl
