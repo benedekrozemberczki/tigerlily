@@ -129,7 +129,7 @@ auroc_score_value = roc_auc_score(y_test["label"], predicted_label[:,1])
 print(f'AUROC score: {auroc_score_value :.4f}')
 ```
 
-Head over to our [documentation](https://tigerlily.readthedocs.io) to find out more about installation and a full API reference.
+Head over to the [documentation](https://tigerlily.readthedocs.io) to find out more about installation and a full API reference.
 For a quick start, check out the [example notebook](https://github.com/benedekrozemberczki/tigerlily/blob/main/example_notebook.ipynb). If you notice anything unexpected, please open an [issue](github.com/benedekrozemberczki/tigerlily/issues).
 
 
