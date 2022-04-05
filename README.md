@@ -76,6 +76,8 @@ machine.upload_graph(new_graph=True, edges=edges)
 
 ### (B) **Computing the Approximate Personalized PageRank vectors**
 
+We are only interested in describing the neighbourhood of drug nodes in the biological graph. Because of this we only retrieve the neighbourhood of the drugs - for each drug we retrieve those nodes (top-k closest neighbors) which are the closest based on the Personalized PageRank scores. We are going to learn the drug embeddings based on these scores. 
+
 ```python
 drug_node_ids = machine.connection.getVertices("drug")
 
