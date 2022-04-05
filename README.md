@@ -56,23 +56,18 @@ from tigerlily.embedding import EmbeddingMachine
 from tigerlily.operator import hadamard_operator
 from tigerlily.pagerank import PersonalizedPageRankMachine
 
-
 dataset = ExampleDataset()
 
 edges = dataset.read_edges()
 target = dataset.read_target()
 
-machine = PersonalizedPageRankMachine(host="https://tigerlily.i.tgcloud.io",
-                           graphname="tester",
-                           secret="",
-                           password="")
-machine.connect()
-
-machine.install_query()
-
+machine = PersonalizedPageRankMachine(host="host_name",
+                                      graphname="graph_name",
+                                      secret="secret_value",
+                                      password="password_value")
+                           
 machine.connect()
 machine.install_query()
-
 ```
 
 Head over to our [documentation](https://tigerlily.readthedocs.io) to find out more about installation and a full API reference.
