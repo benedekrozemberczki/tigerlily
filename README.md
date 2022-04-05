@@ -46,7 +46,7 @@
 --------------------------------------------------------------------------------
 
 
-### **Creating and populating a Graph**
+### (A) **Creating and populating a Graph**
 
 The API of `tigerlily` ....
 
@@ -73,16 +73,16 @@ machine.upload_graph(new_graph=True, edges=edges)
 ```
 
 
-### **Computing the Approximate Personalized PageRank vectors**
+### (B) **Computing the Approximate Personalized PageRank vectors**
 
 ```python
 
 ```
-### Learning the Drug Embeddings and Drug Pair Feature Generation
+### (C) Learning the Drug Embeddings and Drug Pair Feature Generation
 ```python
 
 ```
-### Learning to Predict Drug Interactions and Inference
+### (D) Learning to Predict Drug Interactions and Inference
 
 ```python
 
