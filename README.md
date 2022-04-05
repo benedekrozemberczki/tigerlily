@@ -126,7 +126,7 @@ If you find *Tigerlily* useful in your research, please consider adding the foll
 ```bibtex
 @misc{tigerlily2022,
   author = {Benedek Rozemberczki},
-  title = {TigerLily: Finding drug interactions in-silico with the Graph},
+  title = {TigerLily: Finding drug interactions insilico with the Graph},
   year = {2022},
   publisher = {GitHub},
   journal = {GitHub repository},
