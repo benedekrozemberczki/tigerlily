@@ -95,8 +95,12 @@ drug_pair_features = embedding_machine.create_features(target, concatenation_ope
 ### (D) Learning to Predict Drug Interactions and Inference
 
 ```python
-X_train, X_test, y_train, y_test = train_test_split(X=drug_pair_features,
-                                                    y=target,
+from lightgbm import LGBMClassifier
+from sklearn.metrics import roc_auc_score
+from sklearn.model_selection import train_test_split
+
+X_train, X_test, y_train, y_test = train_test_split(drug_pair_features,
+                                                    target,
                                                     train_size=0.8,
                                                     random_state=42)
 
