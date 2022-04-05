@@ -49,7 +49,7 @@
 ### (A) **Creating and populating a Graph**
 
 
-As a first step the basic **TigerLily** tools are imported and we load the example dataset which integrated DrugBankDDI and the BioSNAP datasets. We create a ``PersonalizedPageRankMachine`` and connect to the host and ``Graph``. We install the default Personalized PageRank query and upload the edges of the example dataset used in our demonstrations.
+As a first step the basic **TigerLily** tools are imported and we load the example dataset which integrated DrugBankDDI and the BioSNAP datasets. We create a ``PersonalizedPageRankMachine`` and connect to the host with the ``Graph``. The settings of this machine should be changed with the appropriate user credentials and details; a secret can be obtained in the **TigerGraph Graph Studio**. We install the default Personalized PageRank query and upload the edges of the example dataset used in our demonstrations.
 
 ```python
 from tigerlily.dataset import ExampleDataset
