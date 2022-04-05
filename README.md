@@ -82,6 +82,7 @@ pagerank_scores = machine.get_personalized_pagerank(drug_node_ids)
 ```
 ### (C) Learning the Drug Embeddings and Drug Pair Feature Generation
 
+We create an embedding machine which will create drug node representations using the the `EmbeddingMachine` from **TigerLily**. The embedding machine instance has a random seed, a dimensions hyperparameter (this sets the number of factors) and a maximal iteration count for the factorization. An embedding is learned from the Personalized PageRank scores computed with TigerGraph and using the drug features we created drug pair features by using a concatenation operator.
 
 ```python
 embedding_machine = EmbeddingMachine(seed=42,
@@ -94,7 +95,7 @@ drug_pair_features = embedding_machine.create_features(target, concatenation_ope
 ```
 ### (D) Learning to Predict Drug Interactions and Inference
 
-We load a gradient boosting based classifier, an evaluation metric for binary classification and a standard data manioulation function to create train-test splits. We create a train and test portion of the drug pais (features and targets). A model is trained on the training portion and we score this model on the test set. We compute an AUROC score on the test portion of the dataset and print it up to the 4th digit.
+We load a gradient boosting based classifier, an evaluation metric for binary classification and a standard data manioulation function to create train-test splits. We create a train and test portion of the drug pais (features and targets) using 80% of the pairs for training. A gradient boosted tree model is trained with 100 trees on the training portion and we score this model on the test set. We compute an AUROC score on the test portion of the dataset and print it out up to the 4th digit.
 
 ```python
 from lightgbm import LGBMClassifier
