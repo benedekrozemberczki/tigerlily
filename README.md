@@ -49,7 +49,7 @@
 </p>
 
 
-As a first step the basic **TigerLily** tools are imported and we load the example dataset which integrated DrugBankDDI and the BioSNAP datasets. We create a ``PersonalizedPageRankMachine`` and connect to the host with the ``Graph``. The settings of this machine should be changed with the appropriate user credentials and details; a secret can be obtained in the **TigerGraph Graph Studio**. We install the default Personalized PageRank query and upload the edges of the example dataset used in our demonstrations.
+As a first step the basic **TigerLily** tools are imported and we load the example dataset which integrated DrugBankDDI and the BioSNAP datasets. We create a ``PersonalizedPageRankMachine`` and connect to the host with the ``Graph``. The settings of this machine should be changed with the appropriate user credentials and details; a secret can be obtained in the **TigerGraph Graph Studio**. We install the default Personalized PageRank query and upload the edges of the example dataset used in our demonstrations. This graph has **drug** and **protein** nodes, **drug-protein** and **protein-protein** interactions. Our goal is to predict the **drug-drug** interactions.
 
 ```python
 from tigerlily.dataset import ExampleDataset
