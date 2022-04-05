@@ -73,10 +73,12 @@ machine.upload_graph(new_graph=True, edges=edges)
 ```
 
 
+### **Computing the Approximate Personalized PageRank vectors**
+
 ```python
 
 ```
-
+### Learning the Drug Embeddings and Drug Pair Feature Generation
 ```python
 
 ```
