@@ -68,6 +68,21 @@ machine = PersonalizedPageRankMachine(host="host_name",
                            
 machine.connect()
 machine.install_query()
+
+machine.upload_graph(new_graph=True, edges=edges)
+```
+
+
+```python
+
+```
+
+```python
+
+```
+
+```python
+
 ```
 
 Head over to our [documentation](https://tigerlily.readthedocs.io) to find out more about installation and a full API reference.
