@@ -39,14 +39,14 @@
 - **(c)** We embed the nodes using [sparse non-negative matrix factorization](https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.NMF.html) of the personalized PageRank matrix.
 - **(d)** Using the node embeddings we train a [gradient boosting](https://lightgbm.readthedocs.io/en/latest/) based drug interaction predictor.
 
-<p align="center">
-  <img width="90%" src="https://github.com/benedekrozemberczki/tigerlily/blob/main/images/pair_scoring.jpg?sanitize=true" />
-</p>
-
 --------------------------------------------------------------------------------
 
 
 ### (A) **Creating and populating a Graph**
+
+<p align="center">
+  <img width="90%" src="https://github.com/benedekrozemberczki/tigerlily/blob/main/images/pair_scoring_A.jpg?sanitize=true" />
+</p>
 
 
 As a first step the basic **TigerLily** tools are imported and we load the example dataset which integrated DrugBankDDI and the BioSNAP datasets. We create a ``PersonalizedPageRankMachine`` and connect to the host with the ``Graph``. The settings of this machine should be changed with the appropriate user credentials and details; a secret can be obtained in the **TigerGraph Graph Studio**. We install the default Personalized PageRank query and upload the edges of the example dataset used in our demonstrations.
@@ -75,6 +75,11 @@ machine.upload_graph(new_graph=True, edges=edges)
 
 
 ### (B) **Computing the Approximate Personalized PageRank vectors**
+
+<p align="center">
+  <img width="90%" src="https://github.com/benedekrozemberczki/tigerlily/blob/main/images/pair_scoring_B.jpg?sanitize=true" />
+</p>
+
 
 We are only interested in describing the neighbourhood of drug nodes in the biological graph. Because of this we only retrieve the neighbourhood of the drugs - for each drug we retrieve those nodes (top-k closest neighbors) which are the closest based on the Personalized PageRank scores. We are going to learn the drug embeddings based on these scores. 
 
