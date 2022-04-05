@@ -76,16 +76,40 @@ machine.upload_graph(new_graph=True, edges=edges)
 ### (B) **Computing the Approximate Personalized PageRank vectors**
 
 ```python
+drug_node_ids = machine.connection.getVertices("drug")
 
+pagerank_scores = machine.get_personalized_pagerank(drug_node_ids)
 ```
 ### (C) Learning the Drug Embeddings and Drug Pair Feature Generation
-```python
 
+
+```python
+embedding_machine = EmbeddingMachine(seed=42,
+                                     dimensions=32,
+                                     max_iter=100)
+
+embedding = embedding_machine.fit(pagerank_scores)
+
+drug_pair_features = embedding_machine.create_features(target, concatenation_operator)
 ```
 ### (D) Learning to Predict Drug Interactions and Inference
 
 ```python
+X_train, X_test, y_train, y_test = train_test_split(X=drug_pair_features,
+                                                    y=target,
+                                                    train_size=0.8,
+                                                    random_state=42)
 
+model = LGBMClassifier(learning_rate=0.01,
+                       n_estimators=100)
+
+model.fit(X_train,y_train["label"])
+
+predicted_label = model.predict_proba(X_test)
+
+auroc_score_value = roc_auc_score(y_test["label"], predicted_label[:,1])
+
+print(f'AUROC score: {auroc_score_value :.4f}')
 ```
 
 Head over to our [documentation](https://tigerlily.readthedocs.io) to find out more about installation and a full API reference.
