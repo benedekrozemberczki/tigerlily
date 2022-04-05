@@ -26,7 +26,7 @@
 
 --------------------------------------------------------------------------------
 
-**Drug Interaction Prediction with Tigerlily**
+### **Drug Interaction Prediction with Tigerlily**
 
 **[Documentation](https://tigerlily.readthedocs.io)** | **[Example Notebook](hhttps://github.com/benedekrozemberczki/tigerlily/blob/main/example_notebook.ipynb)** 
 
@@ -46,7 +46,7 @@
 --------------------------------------------------------------------------------
 
 
-**Getting Started**
+### **Creating and populating a Graph**
 
 The API of `tigerlily` ....
 
