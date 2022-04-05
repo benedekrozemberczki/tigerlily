@@ -94,6 +94,8 @@ drug_pair_features = embedding_machine.create_features(target, concatenation_ope
 ```
 ### (D) Learning to Predict Drug Interactions and Inference
 
+We load a gradient boosting based classifier, an evaluation metric for binary classification and a standard data manioulation function to create train-test splits. We create a train and test portion of the drug pais (features and targets). A model is trained on the training portion and we score this model on the test set. We compute an AUROC score on the test portion of the dataset and print it up to the 4th digit.
+
 ```python
 from lightgbm import LGBMClassifier
 from sklearn.metrics import roc_auc_score
