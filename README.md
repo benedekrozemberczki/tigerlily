@@ -48,7 +48,8 @@
 
 ### (A) **Creating and populating a Graph**
 
-The API of `tigerlily` ....
+
+As a first step the basic **TigerLily** tools are imported and we load the example dataset which integrated DrugBankDDI and the BioSNAP datasets. We create a ``PersonalizedPageRankMachine`` and connect to the host and ``Graph``. We install the default Personalized PageRank query and upload the edges of the example dataset used in our demonstrations.
 
 ```python
 from tigerlily.dataset import ExampleDataset
