@@ -104,7 +104,7 @@ embedding_machine = EmbeddingMachine(seed=42,
 
 embedding = embedding_machine.fit(pagerank_scores)
 
-drug_pair_features = embedding_machine.create_features(target, concatenation_operator)
+drug_pair_features = embedding_machine.create_features(target, hadamard_operator)
 ```
 ### (D) Learning to Predict Drug Interactions and Inference
 
