@@ -65,7 +65,7 @@ We create an embedding machine which creates drug node representations. The embe
     drug_pair_features = embedding_machine.create_features(target, hadamard_operator)
 
 
-Learning to Predict Drug Interactions and Inference
+Predicting Drug Interactions and Inference
 -------------------------------------------------------------
 
 We load a gradient boosting based classifier, an evaluation metric for binary classification and a function to create train-test splits. We create a train and test portion of the drug pairs using 80% of the pairs for training. A gradient boosted tree model is trained, score the model on the test set. We compute an AUROC score on the test portion of the dataset and print it out.
