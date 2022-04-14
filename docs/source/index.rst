@@ -3,8 +3,7 @@
 Tigerlily Documentation
 =======================
 
-Tigerlily is a TigerGraph based system designed to solve the drug interaction prediction task. In
- this machine learning task we want to predict whether two drugs have an adverse interaction. Our framework allows to solve this highly relevant real world problem using graph mining techniques
+Tigerlily is a TigerGraph based system designed to solve the drug interaction prediction task. In this machine learning task we want to predict whether two drugs have an adverse interaction. Our framework allows to solve this highly relevant real world problem using graph mining techniques
  in these steps:
 
 - (a) Using PyTigergraph we create a heterogeneous biological graph of drugs and proteins.
