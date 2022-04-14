@@ -51,8 +51,6 @@ jobs:
           pip install --upgrade pip setuptools wheel
           pip install tox
           sudo apt-get install graphviz
-      - name: Lint documentation
-        run: tox -e doc8
       - name: Check documentation coverage
         run: tox -e docstr-coverage
       - name: Check documentation build
