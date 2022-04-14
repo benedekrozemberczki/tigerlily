@@ -106,14 +106,14 @@ embedding = embedding_machine.fit(pagerank_scores)
 
 drug_pair_features = embedding_machine.create_features(target, hadamard_operator)
 ```
-### (D) Learning to Predict Drug Interactions and Inference
+### (D) Predicting Drug Interactions and Inference
 
 <p align="center">
   <img width="90%" src="https://github.com/benedekrozemberczki/tigerlily/blob/main/images/pair_scoring_D.jpg?sanitize=true" />
 </p>
 
 
-We load a gradient boosting based classifier, an evaluation metric for binary classification and a function to create train-test splits. We create a train and test portion of the drug pais using 80% of the pairs for training. A gradient boosted tree model is trained, score the model on the test set. We compute an AUROC score on the test portion of the dataset and print it ou.
+We load a gradient boosting based classifier, an evaluation metric for binary classification and a function to create train-test splits. We create a train and test portion of the drug pairs using 80% of the pairs for training. A gradient boosted tree model is trained, score the model on the test set. We compute an AUROC score on the test portion of the dataset and print it out.
 
 ```python
 from lightgbm import LGBMClassifier
