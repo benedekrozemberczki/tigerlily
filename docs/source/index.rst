@@ -37,7 +37,6 @@ Tigerlily is a TigerGraph based system designed to solve the drug interaction pr
 
 
    notes/installation
-   notes/introduction
    notes/tutorial
    notes/resources
 
