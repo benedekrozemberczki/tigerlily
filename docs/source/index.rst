@@ -40,6 +40,5 @@ If you would use TigerLily please cite our work:
 
    notes/installation
    notes/tutorial
-   notes/resources
 
 
