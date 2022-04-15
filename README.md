@@ -32,7 +32,7 @@
 
 
 
-**Tigerlily** is a [TigerGraph](https://www.tigergraph.com/) based system designed to solve the [drug interaction prediction task](https://arxiv.org/abs/2111.02916). In this machine learning task we want to predict whether two drugs have an adverse interaction. Our framework allows to solve this **[highly relevant real world problem](https://www.newscientist.com/article/2143486-side-effects-kill-thousands-but-our-data-on-them-is-flawed/)** using graph mining techniques in these steps: 
+**Tigerlily** is a [TigerGraph](https://www.tigergraph.com/) based system designed to solve the [drug interaction prediction task](https://arxiv.org/abs/2111.02916). In this machine learning task, we want to predict whether two drugs have an adverse interaction. Our framework allows us to solve this **[highly relevant real-world problem](https://www.newscientist.com/article/2143486-side-effects-kill-thousands-but-our-data-on-them-is-flawed/)** using graph mining techniques in these steps: 
 
 - **(a)** Using [PyTigergraph](https://github.com/pyTigerGraph/pyTigerGraph) we create a heterogeneous biological graph of drugs and proteins.
 - **(b)** We calculate the [personalized PageRank](https://github.com/tigergraph/gsql-graph-algorithms/blob/master/algorithms/Centrality/pagerank/personalized/multi_source/tg_pagerank_pers.gsql) scores of drug nodes in the [TigerGraph Cloud](https://tgcloud.io/).
@@ -49,7 +49,7 @@
 </p>
 
 
-As a first step the basic **TigerLily** tools are imported and we load the example dataset which integrated DrugBankDDI and the BioSNAP datasets. We create a ``PersonalizedPageRankMachine`` and connect to the host with the ``Graph``. The settings of this machine should be changed with the appropriate user credentials and details; a secret can be obtained in the **TigerGraph Graph Studio**. We install the default Personalized PageRank query and upload the edges of the example dataset used in our demonstrations. This graph has **drug** and **protein** nodes, **drug-protein** and **protein-protein** interactions. Our goal is to predict the **drug-drug** interactions.
+As a first step, the basic **TigerLily** tools are imported, and we load the example dataset that integrated DrugBankDDI and the BioSNAP datasets. We create a ``PersonalizedPageRankMachine`` and connect to the host with the ``Graph``. The settings of this machine should be the appropriate user credentials and details; a secret is obtained in the **TigerGraph Graph Studio**. We install the default Personalized PageRank query and upload the edges of the example dataset used in our demonstrations. This graph has **drug** and **protein** nodes, **drug-protein** and **protein-protein** interactions. Our goal is to predict the **drug-drug** interactions.
 
 ```python
 from tigerlily.dataset import ExampleDataset
@@ -81,7 +81,7 @@ machine.upload_graph(new_graph=True, edges=edges)
 </p>
 
 
-We are only interested in describing the neighbourhood of drug nodes in the biological graph. Because of this we only retrieve the neighbourhood of the drugs - for each drug we retrieve those nodes (top-k closest neighbors) which are the closest based on the Personalized PageRank scores. We are going to learn the drug embeddings based on these scores. 
+We are only interested in describing the neighbourhood of drug nodes in the biological graph. Because of this, we only retrieve the neighbourhood of the drugs - for each drug we retrieve those nodes (top-k closest neighbors) which are the closest based on the Personalized PageRank scores. We are going to learn the drug embeddings based on these scores.  
 
 ```python
 drug_node_ids = machine.connection.getVertices("drug")
@@ -95,7 +95,7 @@ pagerank_scores = machine.get_personalized_pagerank(drug_node_ids)
 </p>
 
 
-We create an embedding machine which creates drug node representations. The embedding machine instance has a random seed, a dimensions hyperparameter (this sets the number of factors) and a maximal iteration count for the factorization. An embedding is learned from the Personalized PageRank scores and using the drug features we create drug pair features.
+We create an embedding machine that creates drug node representations. The embedding machine instance has a random seed, a dimensions hyperparameter (this sets the number of factors), and a maximal iteration count for the factorization. An embedding is learned from the Personalized PageRank scores and using the drug features we create drug pair features with the operator function.
 
 ```python
 embedding_machine = EmbeddingMachine(seed=42,
@@ -113,7 +113,7 @@ drug_pair_features = embedding_machine.create_features(target, hadamard_operator
 </p>
 
 
-We load a gradient boosting based classifier, an evaluation metric for binary classification and a function to create train-test splits. We create a train and test portion of the drug pairs using 80% of the pairs for training. A gradient boosted tree model is trained, score the model on the test set. We compute an AUROC score on the test portion of the dataset and print it out.
+We load a gradient boosting-based classifier, an evaluation metric for binary classification, and a function to create train-test splits. We create a train and test portion of the drug pairs using 80% of the pairs for training. A gradient boosted tree model is trained, score the model on the test set. We compute an AUROC score on the test portion of the dataset and print it out.
 
 ```python
 from lightgbm import LGBMClassifier
@@ -181,3 +181,12 @@ $ tox -e py
 **License**
 
 - [Apache 2.0 License](https://github.com/benedekrozemberczki/tigerlily/blob/main/LICENSE)
+
+--------------------------------------------------------------------------------
+
+**Credit**
+
+The TigerLily logo and the high level machine learning workflow image are based on (the library creator has an unlimited yearly subscription to the Noun Project that allows the modification of the logos):
+
+- [Kubos Origami Font](https://www.fontspace.com/kubos-origami-font-f29538)
+- [Noun Project](https://thenounproject.com/)
