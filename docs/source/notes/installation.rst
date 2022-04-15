@@ -10,7 +10,7 @@ The package itself can be installed via pip:
 
 **Updating the Library**
 
-Upgrade your outdated tigerlily version by using:
+Upgrade your outdated TigerLily version by using:
 
 .. code-block:: shell
 

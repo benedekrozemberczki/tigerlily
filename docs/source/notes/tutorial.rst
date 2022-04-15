@@ -9,7 +9,7 @@ Tutorial
 Creating and Populating a Graph
 ------------------------------------
 
-As a first step the basic TigerLily tools are imported and we load the example dataset which integrated DrugBankDDI and the BioSNAP datasets. We create a ``PersonalizedPageRankMachine`` and connect to the host with the Graph. The settings of this machine should be changed with the appropriate user credentials and details; a secret can be obtained in the TigerGraph Graph Studio. We install the default Personalized PageRank query and upload the edges of the example dataset used in our demonstrations. This graph has drug and protein nodes, drug-protein and protein-protein interactions. Our goal is to predict the drug-drug interactions
+As a first step, the basic TigerLily tools are imported and we load the example dataset which integrated DrugBankDDI and the BioSNAP datasets. We create a ``PersonalizedPageRankMachine`` and connect to the host with the Graph. The settings of this machine should be changed with the appropriate user credentials and details; a secret can be obtained in the TigerGraph Graph Studio. We install the default Personalized PageRank query and upload the edges of the example dataset used in our demonstrations. This graph has drug and protein nodes, and drug-protein and protein-protein interactions. Our goal is to predict the drug-drug interactions
 
 .. code-block:: python
 
@@ -51,7 +51,7 @@ We are only interested in describing the neighbourhood of drug nodes in the biol
 Learning the Drug Embeddings and Drug Pair Feature Generation
 -------------------------------------------------------------
 
-We create an embedding machine which creates drug node representations. The embedding machine instance has a random seed, a dimensions hyperparameter (this sets the number of factors) and a maximal iteration count for the factorization. An embedding is learned from the Personalized PageRank scores and using the drug features we create drug pair features.
+We create an embedding machine that creates drug node representations. The embedding machine instance has a random seed, a dimensions hyperparameter (this sets the number of factors), and a maximal iteration count for the factorization. An embedding is learned from the Personalized PageRank scores and using the drug features we create drug pair features.
 
 
 .. code-block:: python
@@ -68,7 +68,7 @@ We create an embedding machine which creates drug node representations. The embe
 Predicting Drug Interactions and Inference
 -------------------------------------------------------------
 
-We load a gradient boosting based classifier, an evaluation metric for binary classification and a function to create train-test splits. We create a train and test portion of the drug pairs using 80% of the pairs for training. A gradient boosted tree model is trained, score the model on the test set. We compute an AUROC score on the test portion of the dataset and print it out.
+We load a gradient boosting-based classifier, an evaluation metric for binary classification, and a function to create train-test splits. We create a train and test portion of the drug pairs using 80% of the pairs for training. A gradient boosted tree model is trained, score the model on the test set. We compute an AUROC score on the test portion of the dataset and print it out.
 
 
 .. code-block:: python
