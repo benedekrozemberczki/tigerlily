@@ -186,7 +186,9 @@ $ tox -e py
 
 **Credit**
 
-The **TigerLily** logo and the high level machine learning workflow image are based on (the library creator has an unlimited yearly subscription to the Noun Project that allows the modification of the logos):
+The **TigerLily** logo and the high level machine learning workflow image are based on:
 
 - [Kubos Origami Font](https://www.fontspace.com/kubos-origami-font-f29538)
 - [Noun Project Icons](https://thenounproject.com/)
+
+Benedek Rozemberczki has an unlimited yearly subscription to the Noun Project that allows the modification of the icons.
