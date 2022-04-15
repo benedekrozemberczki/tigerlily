@@ -6,7 +6,7 @@
 [build-url]: https://github.com/benedekrozemberczki/tigerlily/actions?query=workflow%3ACI
 [docs-image]: https://readthedocs.org/projects/tigerlily/badge/?version=latest
 [docs-url]: https://tigerlily.readthedocs.io/en/latest/?badge=latest
-[coverage-image]: https://codecov.io/gh/benedekrozemberczki/tigerlily/branch/main/graph/badge.svg
+[coverage-image]: https://codecov.io/gh/benedekrozemberczki/tigerlily/branch/main/graph/badge.svg?token=30XLVBUIEH
 [coverage-url]: https://codecov.io/github/benedekrozemberczki/tigerlily?branch=main
 
 
@@ -191,4 +191,4 @@ The **TigerLily** logo and the high level machine learning workflow image are ba
 - [Kubos Origami Font](https://www.fontspace.com/kubos-origami-font-f29538)
 - [Noun Project Icons](https://thenounproject.com/)
 
-Benedek Rozemberczki has a yearly subscription to the Noun Project that allows commercial use of the icons.
+Benedek Rozemberczki has a yearly subscription to the Noun Project that allows commercial useof the icons.
