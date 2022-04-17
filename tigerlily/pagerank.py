@@ -13,7 +13,7 @@ from tqdm.notebook import tqdm
 class PersonalizedPageRankMachine:
     """Define a drug-protein graph and compute the Personalized PageRank of nodes."""
 
-    def __init__(self, host: str, graphname: str, username: str,  secret: str, password: str):
+    def __init__(self, host: str, graphname: str, username: str, secret: str, password: str):
         """Set up a Personalized PageRank computation machine.
 
         :param host: Address of the TigerGraph host.
@@ -30,7 +30,6 @@ class PersonalizedPageRankMachine:
 
     def connect(self):
         """Connect to the host with the authentication details."""
-
 
         token_getter = tg.TigerGraphConnection(host=self._host, graphname=self._graphname)
 
