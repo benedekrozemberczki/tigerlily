@@ -25,6 +25,7 @@ As a first step, the basic TigerLily tools are imported and we load the example 
 
     machine = PersonalizedPageRankMachine(host="host_name",
                                           graphname="graph_name",
+                                          username="user_name",
                                           secret="secret_value",
                                           password="password_value")
                            

@@ -13,27 +13,31 @@ from tqdm.notebook import tqdm
 class PersonalizedPageRankMachine:
     """Define a drug-protein graph and compute the Personalized PageRank of nodes."""
 
-    def __init__(self, host: str, graphname: str, secret: str, password: str):
+    def __init__(self, host: str, graphname: str, username: str,  secret: str, password: str):
         """Set up a Personalized PageRank computation machine.
 
         :param host: Address of the TigerGraph host.
         :param graphname: Name of the Graph used for analytics.
+        :param username: The username for the grapgh
         :param secret: The secret generated in TigerGraph Studio.
         :param password: The password of the user.
         """
         self._host = host
         self._graphname = graphname
+        self._username = username
         self._secret = secret
         self._password = password
 
     def connect(self):
         """Connect to the host with the authentication details."""
+
+
         token_getter = tg.TigerGraphConnection(host=self._host, graphname=self._graphname)
 
         token = token_getter.getToken(self._secret, "12000")[0]
 
         self.connection = tg.TigerGraphConnection(
-            host=self._host, graphname=self._graphname, password=self._password, apiToken=token
+            host=self._host, graphname=self._graphname, username=self._username, password=self._password, apiToken=token
         )
 
     def _purge_graph(self):
@@ -62,7 +66,8 @@ class PersonalizedPageRankMachine:
         """
         assert "type_1" in edges.columns and "type_2" in edges.columns
         assert "node_1" in edges.columns and "node_2" in edges.columns
-        self._purge_graph()
+        if new_graph:
+            self._purge_graph()
         self._upload_relationship(edges, "drug", "gene", "interacts")
         self._upload_relationship(edges, "gene", "gene", "interacts")
         self._upload_relationship(edges, "gene", "drug", "interacts")

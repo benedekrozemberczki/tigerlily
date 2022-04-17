@@ -64,6 +64,7 @@ target = dataset.read_target()
 
 machine = PersonalizedPageRankMachine(host="host_name",
                                       graphname="graph_name",
+                                      username="username_value",
                                       secret="secret_value",
                                       password="password_value")
                            
