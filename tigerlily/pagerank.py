@@ -30,7 +30,6 @@ class PersonalizedPageRankMachine:
 
     def connect(self):
         """Connect to the host with the authentication details."""
-
         token_getter = tg.TigerGraphConnection(host=self._host, graphname=self._graphname)
 
         token = token_getter.getToken(self._secret, "12000")[0]
