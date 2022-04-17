@@ -33,7 +33,7 @@ class TestPipeline(unittest.TestCase):
 
     def test_pagerank(self):
         """Test PageRank."""
-        pr = PersonalizedPageRankMachine("host", "graph", "user",  "secret", "pass")
+        pr = PersonalizedPageRankMachine("host", "graph", "user", "secret", "pass")
         assert pr._host == "host"
 
     def test_operators(self):
