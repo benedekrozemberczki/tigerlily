@@ -29,7 +29,7 @@
 
 ### **Drug Interaction Prediction with Tigerlily**
 
-**[Documentation](https://tigerlily.readthedocs.io)** | **[Example Notebook](https://github.com/benedekrozemberczki/tigerlily/blob/main/example_notebook.ipynb)** |  **[Youtube Video](https://www.youtube.com/watch?v=fEWcor96tt8)** |  **[Project Report](https://github.com/benedekrozemberczki/tigerlily/blob/main/TigerLilyReport.pdf)** 
+**[Documentation](https://tigerlily.readthedocs.io)** | **[Example Notebook](https://github.com/benedekrozemberczki/tigerlily/blob/main/example_notebook.ipynb)** |  **[Youtube Video](https://www.youtube.com/watch?v=fEWcor96tt8)** |  **[Project Report](http://arxiv.org/abs/2204.08206)** 
 
 
 
