@@ -14,6 +14,7 @@
 [![Docs Status][docs-image]][docs-url]
 [![Code Coverage][coverage-image]][coverage-url]
 [![Build Status][build-image]][build-url]
+[![Arxiv](https://img.shields.io/badge/ArXiv-2204.08206-orange.svg)](https://arxiv.org/abs/2204.08206)
 
 
 <p align="center">
